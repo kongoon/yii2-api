@@ -1,0 +1,2 @@
+[25-Apr-2016 20:39:22 Asia/Bangkok] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/programm/public_html/api/modules/v1/controllers/CategoryController.php on line 2
+[26-Apr-2016 02:26:29 Asia/Bangkok] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/programm/public_html/api/modules/v1/controllers/CategoryController.php on line 2
