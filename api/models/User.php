@@ -7,6 +7,7 @@
  */
 namespace api\models;
 
+use api\components\UserJwt;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
@@ -31,7 +32,7 @@ class User extends ActiveRecord implements IdentityInterface
     public $token;
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
-    use \api\components\UserJwt;
+    use UserJwt;
     /**
      * @inheritdoc
      */
@@ -203,17 +204,4 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
 
-    /**
-     * Finds an identity by the given token.
-     * @param mixed $token the token to be looked for
-     * @param mixed $type the type of the token. The value of this parameter depends on the implementation.
-     * For example, [[\yii\filters\auth\HttpBearerAuth]] will set this parameter to be `yii\filters\auth\HttpBearerAuth`.
-     * @return IdentityInterface the identity object that matches the given token.
-     * Null should be returned if such an identity cannot be found
-     * or the identity is not in an active state (disabled, deleted, etc.)
-     */
-    public static function findIdentityByAccessToken($token, $type = null)
-    {
-        // TODO: Implement findIdentityByAccessToken() method.
-    }
 }

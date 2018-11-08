@@ -26,7 +26,7 @@ $params = array_merge(
 );
 
 use \yii\web\Request;
-$baseUrl = str_replace('/api/web', '/api/', (new Request)->getBaseUrl());
+//$baseUrl = str_replace('/api/web', '/api/', (new Request)->getBaseUrl());
 //echo $baseUrl;
 $rules = require(__DIR__ . '/rules.php');
 
