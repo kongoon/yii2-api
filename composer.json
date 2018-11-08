@@ -20,7 +20,10 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "mdmsoft/yii2-admin": "2.x-dev",
         "2amigos/yii2-chartjs-widget" : "~2.0",
-        "mpdf/mpdf": "^7.1"
+        "mpdf/mpdf": "^7.1",
+        "zircote/swagger-php": "2.0.6",
+        "firebase/php-jwt": "^5.0",
+        "vlucas/phpdotenv": "^2.4"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

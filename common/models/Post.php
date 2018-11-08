@@ -22,6 +22,40 @@ use yii\behaviors\TimestampBehavior;
  * @property User $createdBy
  * @property User $updatedBy
  */
+
+/**
+ * @SWG\Definition(
+ *   definition="CreatePost",
+ *   type="object",
+ *   required={"title", "content"},
+ *   @SWG\Property(property="title", type="string"),
+ *   @SWG\Property(property="content", type="string")
+ * )
+ */
+/**
+ * @SWG\Definition(
+ *   definition="UpdatePost",
+ *   type="object",
+ *   required={"title", "content"},
+ *   allOf={
+ *       @SWG\Schema(ref="#/definitions/CreatePost"),
+ *   }
+ * )
+ */
+/**
+ * @SWG\Definition(
+ *   definition="Post",
+ *   type="object",
+ *   required={"title", "content"},
+ *   allOf={
+ *       @SWG\Schema(ref="#/definitions/CreatePost"),
+ *       @SWG\Schema(
+ *           required={"id"},
+ *           @SWG\Property(property="id", format="int64", type="integer")
+ *       )
+ *   }
+ * )
+ */
 class Post extends \yii\db\ActiveRecord
 {
     /**
